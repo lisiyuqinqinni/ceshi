@@ -1,6 +1,6 @@
 <template>
-  <div>
-    我是首页
+  <div class="document">
+  我是home
   </div>
 </template>
 
@@ -9,5 +9,6 @@ export default {
 }
 </script>
 
-<style>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 </style>

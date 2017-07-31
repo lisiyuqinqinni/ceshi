@@ -4,13 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-var test = true
-
 Vue.config.productionTip = false
 
-var func = test => {
-
-}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

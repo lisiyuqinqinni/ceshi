@@ -1,6 +1,6 @@
 <template>
-  <div class="document">
-  我是document
+  <div>
+  	我是about2
   </div>
 </template>
 

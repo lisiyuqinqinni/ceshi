@@ -1,6 +1,6 @@
 <template>
   <div>
-    404,您访问的页面不存在
+  404,你访问的页面不存在
   </div>
 </template>
 
@@ -9,5 +9,6 @@ export default {
 }
 </script>
 
-<style>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 </style>

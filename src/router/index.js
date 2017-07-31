@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home'
-import About from '@/components/about'
-import Document from '@/components/document'
+import hello from '@/components/Hello'
+import about from '@/components/about'
+import document from '@/components/document'
+import home from '@/components/home'
 import noFind from '@/components/404'
-
+import about1 from '@/components/about1'
+import about2 from '@/components/about2'
 Vue.use(Router)
 
 export default new Router({
@@ -12,26 +14,42 @@ export default new Router({
   linkActiveClass: 'active',
   routes: [
     {
+      path: '/',
+      name: 'hello',
+      component: hello
+    },
+    {
       path: '/home',
-      name: Home,
-      component: Home
+      component: home
     },
     {
       path: '/about',
-      name: About,
-      component: About
+      name: 'about',
+      component: about,
+      children: [
+        {
+          path: '/about/',
+          component: about1
+        },
+        {
+          path: '/about/about2',
+          component: about2
+        }
+      ]
     },
     {
       path: '/document',
-      component: Document
+      name: 'document',
+      components: {
+        default: document,
+        noFind: noFind
+      }
     },
     {
       path: '*',
-      // component: noFind
-      // redirect: '/home'
-      // redirect: { name: Home }
       redirect: (to) => {
         console.log(to)
+        return '/home'
       }
     }
   ]

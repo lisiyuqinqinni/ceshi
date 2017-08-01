@@ -12,6 +12,11 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   linkActiveClass: 'active',
+  scrollBehavior: (to, from, savedPosition) => {
+    console.log(to)
+    console.log(from)
+    console.log(savedPosition)
+  },
   routes: [
     {
       path: '/',

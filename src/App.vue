@@ -6,7 +6,7 @@
       <router-link to="/document" tag="li">document</router-link>
       <router-link to="/home" tag="li">home</router-link>
     </ul>
-    <router-view class="center"></router-view>
+    <router-view class="center" style="height:1000px;"></router-view>
     <router-view class="center" name="noFind"></router-view>
   </div>
 </template>

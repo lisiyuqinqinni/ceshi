@@ -7,15 +7,13 @@ import home from '@/components/home'
 import noFind from '@/components/404'
 import about1 from '@/components/about1'
 import about2 from '@/components/about2'
+import user from '@/components/user'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   linkActiveClass: 'active',
   scrollBehavior: (to, from, savedPosition) => {
-    console.log(to)
-    console.log(from)
-    console.log(savedPosition)
     if (savedPosition) {
       return savedPosition
     } else {
@@ -31,6 +29,10 @@ export default new Router({
     {
       path: '/home',
       component: home
+    },
+    {
+      path: '/user/:tip?/:userId?',
+      component: user
     },
     {
       path: '/about',

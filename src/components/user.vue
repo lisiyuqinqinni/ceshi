@@ -12,7 +12,7 @@
       <div v-if="userInfo.name">
         <!-- <router-link exact to="?info=follow">我的关注</router-link>
         <router-link exact to="?info=share">我的分享</router-link> -->
-        <router-link exact :to="{path:'',query:{info:'follow',a:1}}">我的关注</router-link>
+        <router-link exact :to="{path:'',query:{info:'follow'}}">我的关注</router-link>
         <router-link exact :to="{path:'',query:{info:'share'}}">我的分享</router-link>
         <div>
           {{$route.query}}
@@ -75,5 +75,35 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  ul{
+    height: 20px;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 30px
+  }
+  ul li{
+    width:60px;
+    margin:0 70px;
+    float: left;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  li.active{
+    background: #f0fa45;
+  }
+  a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+    color:#333;
+  }
+  a.active{
+    background: #03eaf0;
+  }
 </style>

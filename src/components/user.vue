@@ -46,6 +46,19 @@ let data = [
   }
 ]
 export default {
+  beforeRouteEnter (to, form, next) {
+    console.log('before')
+    next((vm) => {
+      vm.userList[0].name = '黎明'
+    })
+  },
+  beforeRouteUpdate (to, form, next) {
+    console.log('updata')
+    next()
+  },
+  beforeRouteLeave () {
+    console.log('leave')
+  },
   data () {
     return {
       userList: data,

@@ -7,6 +7,17 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+router.beforeEach((to, form, next) => {
+  next()
+})
+router.afterEach((to, form) => {
+  console.log(to.meta.title)
+  if (to.meta.title) {
+    window.document.title = to.meta.title
+  } else {
+    window.document.title = 'lisiyu'
+  }
+})
 new Vue({
   el: '#app',
   router,

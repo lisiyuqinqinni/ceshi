@@ -24,15 +24,24 @@ export default new Router({
     {
       path: '/',
       name: 'hello',
-      component: hello
+      component: hello,
+      meta: {
+        title: 'hello'
+      }
     },
     {
       path: '/home',
-      component: home
+      component: home,
+      meta: {
+        title: 'home'
+      }
     },
     {
       path: '/user/:tip?/:userId?',
-      component: user
+      component: user,
+      meta: {
+        title: 'user'
+      }
     },
     {
       path: '/about',
@@ -41,7 +50,10 @@ export default new Router({
       children: [
         {
           path: '/about/',
-          component: about1
+          component: about1,
+          meta: {
+            title: 'about'
+          }
         },
         {
           path: '/about/about2',
